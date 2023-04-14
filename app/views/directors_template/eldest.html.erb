@@ -1,4 +1,8 @@
 <h1>Eldest director</h1>
 
-<p>The eldest director in our dataset right now is <%= @oldest.name %>, born <%= @oldest.dob.strftime("%B %e, %Y") %> .
+<p>The eldest director in our dataset right now is 
+<a href = "@list_of_directors" ><%= @oldest.name %></a>, born <%= @oldest.dob.strftime("%B %e, %Y") %> .
+</p>
+
+<p>(<a href = "http://strftime.net/">http://strftime.net/</a> is handy for putting together the formatting strings for the .strftime method.)
 </p>
