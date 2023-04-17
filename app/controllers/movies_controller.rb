@@ -8,8 +8,10 @@ class MoviesController < ApplicationController
 
   def movie_details
 
-    the_id = params.fetch("an_id")
-    @the_film = Movie.where({ :id => the_id })#.at(0)
+    the_id = params.fetch("movie_id")
+    @the_film = Movie.where({ :id => the_id }).at(0)
+    #dir_id = params.fetch("an_id")
+    #@director = Director.where({ :id => dir_id}).at(0)
 
     render({ :template => "movies_template/show.html.erb"}) 
   end
